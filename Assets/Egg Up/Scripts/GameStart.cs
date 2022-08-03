@@ -21,7 +21,7 @@ public class GameStart : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("dddddddddddddddddddddddd");
+            ////Debug.Log("dddddddddddddddddddddddd");
 
             
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
