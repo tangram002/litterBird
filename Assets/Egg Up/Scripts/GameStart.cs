@@ -40,9 +40,13 @@ public class GameStart : MonoBehaviour
                 ///Debug.DrawLine(ray.origin, hit.point, Color.red);//将射线绘制出来 射线显示红色
                 Debug.Log(hit.collider.gameObject.name);
 
-                BirdSelectStory c = hit.collider.gameObject.GetComponent<BirdSelectStory>();
+                if (hit.collider.gameObject != null)
+                {
+                    BirdSelectStory c = hit.collider.gameObject.GetComponent<BirdSelectStory>();
 
-                c.ByTouch();
+                    if(c!=null)
+                        c.ByTouch();
+                }
 
 
             }
