@@ -8,7 +8,7 @@ public class LevelGenerator : MonoBehaviour {
 	public GameObject platform;
 	public Transform parent;
 	public Transform pole;
-	public Transform finishLine;
+	public GameObject finishLine;
 	
 	public float yOffset;
 	public int rotationMin;
@@ -67,10 +67,13 @@ public class LevelGenerator : MonoBehaviour {
 		}
 		
 		//position the finish line at the top and scale the center pole
-		finishLine.position = Vector3.up * height;
-		finishLine.SetParent(parent, false);
-		
+		finishLine.transform.position = Vector3.up * height;
+		finishLine.transform.SetParent(parent, false);
+
+		finishLine.transform.SetParent(null);
+
 		Vector3 poleScale = pole.localScale;
+
 		pole.localScale = new Vector3(poleScale.x, height, poleScale.z);
 	}
 }

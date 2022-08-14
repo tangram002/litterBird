@@ -51,11 +51,13 @@ public class GameManager : MonoBehaviour {
 	
 	int currentHeight;
 	float lastHeight;
-	
+
+	public int level;
+
 	void Awake(){
 		//get the level index and set the size of this level accordingly
-		int level = PlayerPrefs.GetInt("Level");
-		totalHeight = 30 + (level * 5);
+		///int level = PlayerPrefs.GetInt("Level");
+		totalHeight = 2 + (level * 1);
 		
 		//update the level labels at the bottom of the screen
 		leftText.text = (level + 1) + "";
@@ -186,7 +188,7 @@ public class GameManager : MonoBehaviour {
 			
 			victory.Play();
 			
-			PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+			///PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
 			
 			tapToContinue.SetActive(true);
 		}
