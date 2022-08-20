@@ -54,9 +54,14 @@ public class GameManager : MonoBehaviour {
 
 	public int level;
 
+	bool isSuccess = false;
+
 	void Awake(){
 		//get the level index and set the size of this level accordingly
 		///int level = PlayerPrefs.GetInt("Level");
+		///
+		isSuccess = false;
+
 		totalHeight = 2 + (level * 1);
 		
 		//update the level labels at the bottom of the screen
@@ -97,7 +102,11 @@ public class GameManager : MonoBehaviour {
 		}
 		else if(Input.GetMouseButtonDown(0)){
 			//if game is over and player taps, reload the current scene
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			
+			if(isSuccess)
+				SceneManager.LoadScene("StartScene");
+			else
+				SceneManager.LoadScene("Game");
 		}
 		
 		//fade background transparency
@@ -158,7 +167,7 @@ public class GameManager : MonoBehaviour {
 		
 		title.SetTrigger("Hide");
 		
-		progressIndicator.SetActive(true);
+		///progressIndicator.SetActive(true);
 		holdToRotate.SetActive(false);
 	}
 	
@@ -190,12 +199,16 @@ public class GameManager : MonoBehaviour {
 			
 			///PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
 			
-			tapToContinue.SetActive(true);
+			///tapToContinue.SetActive(true);
+
+			isSuccess = true;
 		}
 		else{
 			//show the restart text
 			tapToRestart.SetActive(true);
 			holdToRotate.SetActive(false);
+
+			isSuccess = false;
 		}
 	}
 }

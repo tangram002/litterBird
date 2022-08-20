@@ -57,7 +57,7 @@ public class GameStart : MonoBehaviour
 
     public void startGame() {
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Cinema");
 
     }
 }

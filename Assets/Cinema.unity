@@ -215,6 +215,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99717506}
   m_CullTransparentMesh: 0
+--- !u!1 &336759645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5266796780264408963, guid: 733d31db15750b4479a1b14a0322a0b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1481508246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &336759646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336759645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5ea069c1ee3b748be0a13faf814431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 336759648}
+--- !u!54 &336759647
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336759645}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!95 &336759648 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1494236011299424067, guid: 733d31db15750b4479a1b14a0322a0b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1481508246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &388547377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,6 +637,7 @@ GameObject:
   - component: {fileID: 435132006}
   - component: {fileID: 435132005}
   - component: {fileID: 435132008}
+  - component: {fileID: 435132009}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -684,6 +726,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &435132009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435132004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb91dd7b1403634faf3f0be23563eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myText: {fileID: 99717509}
+  myBird: {fileID: 336759646}
 --- !u!1 &1064624726
 GameObject:
   m_ObjectHideFlags: 0

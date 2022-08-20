@@ -1072,12 +1072,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c718449ac175f0845b60e30ab3135791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platform: {fileID: 1522689476835324134, guid: 0e8f1cd527fbd4041a2a50e79003e387,
+  platform: {fileID: 8236679894403571149, guid: d731be56521e82b49bb986169e8e1e25,
     type: 3}
   parent: {fileID: 1526458767}
   pole: {fileID: 1361770968}
   finishLine: {fileID: 45791739}
-  yOffset: 1.4
+  yOffset: 1
   rotationMin: 10
   rotationMax: 120
   startHeight: 0
@@ -6973,7 +6973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bdf1dbc9236f84ea22d58957b0c1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 0.48
+  sensitivity: 0.35
 --- !u!1 &1536160524
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,7 +7029,7 @@ MonoBehaviour:
   tapToRestart: {fileID: 391908137}
   tapToContinue: {fileID: 450982819}
   totalHeight: 0
-  level: 1
+  level: 10
 --- !u!4 &1536160526
 Transform:
   m_ObjectHideFlags: 0

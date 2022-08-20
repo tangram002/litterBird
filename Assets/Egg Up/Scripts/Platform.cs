@@ -21,7 +21,10 @@ public class Platform : MonoBehaviour {
 	
 	public AudioSource bouncePadSound;
 	public AudioSource diamondSound;
-	
+
+	public List<GameObject> little_leaf;
+	public GameObject leaf;
+
 	//not visible in inspector
 	bool diamond;
 	
@@ -33,6 +36,36 @@ public class Platform : MonoBehaviour {
 	void Start(){
 		//get game manager
 		manager = FindObjectOfType<GameManager>();
+
+		///int r = UnityEngine.Random.Range(0, 6);
+
+		//int r2 = UnityEngine.Random.Range(3,6);
+
+		//leaf.transform.localScale = Vector3.one *r2;
+
+		foreach (var one in little_leaf) {
+
+			int r = UnityEngine.Random.Range(0, 2);
+			if (r == 0)
+				continue;
+			one.SetActive(false);
+		}
+
+		/**
+		switch (r) { 			
+			case 0:				
+				break;
+			case 1:
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+		
+		}
+		*/
 	}
 	
 	//when player hits this platform, it bounces
@@ -72,14 +105,15 @@ public class Platform : MonoBehaviour {
 	public void SetDiamond(bool hasDiamond, bool canHaveBouncePad){
 		diamond = hasDiamond;
 		
-		bouncePad.SetActive(false);
+		//bouncePad.SetActive(false);
 		
 		if(!hasDiamond){
+
 			diamondHolder.SetActive(false);
 			
 			if(Random.Range(0, bouncePadChance) == 0 && canHaveBouncePad){
 				hasBouncePad = true;
-				bouncePad.SetActive(true);
+				//bouncePad.SetActive(true);
 				
 				circleImage.color = Color.red;
 			}
