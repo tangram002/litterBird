@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 		///
 		isSuccess = false;
 
-		totalHeight = 2 + (level * 1);
+		totalHeight = 2 + (level * 3);
 		
 		//update the level labels at the bottom of the screen
 		leftText.text = (level + 1) + "";

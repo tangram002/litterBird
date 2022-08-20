@@ -7029,7 +7029,7 @@ MonoBehaviour:
   tapToRestart: {fileID: 391908137}
   tapToContinue: {fileID: 450982819}
   totalHeight: 0
-  level: 20
+  level: 50
 --- !u!4 &1536160526
 Transform:
   m_ObjectHideFlags: 0
