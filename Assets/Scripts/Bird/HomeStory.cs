@@ -38,7 +38,7 @@ public class HomeStory : MonoBehaviour
 
         Vector3 oldPos =  myBird.transform.position;
 
-        myBird.transform.DOMoveY(oldPos.y + 1, 3f).OnComplete(() => {
+        myBird.transform.DOMoveY(oldPos.y + 1.5f, 3f).OnComplete(() => {
             
            myBird.transform.DOMoveX(oldPos.x + 2, 3f).OnComplete(() => {
 
