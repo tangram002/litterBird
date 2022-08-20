@@ -102,9 +102,12 @@ public class GameManager : MonoBehaviour {
 		}
 		else if(Input.GetMouseButtonDown(0)){
 			//if game is over and player taps, reload the current scene
-			
-			if(isSuccess)
+
+			if (isSuccess)
+			{
 				SceneManager.LoadScene("StartScene");
+				PlayerPrefs.SetInt("Diamonds", 0);
+			}
 			else
 				SceneManager.LoadScene("Game");
 		}
@@ -173,7 +176,9 @@ public class GameManager : MonoBehaviour {
 	
 	//add diamonds and update the playerprefs as well as the diamond UI
 	public void AddDiamonds(int count, bool showEmoji){
+
 		int diamonds = PlayerPrefs.GetInt("Diamonds");
+		
 		diamonds += count;
 		
 		PlayerPrefs.SetInt("Diamonds", diamonds);
