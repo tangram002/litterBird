@@ -79,6 +79,8 @@ public class BirdSelectStory : MonoBehaviour
             }
            */
 
+            AudioManager.I().playEffect(4);
+
             animator.SetInteger("animation", myTouchAction);
 
             isAction = true;

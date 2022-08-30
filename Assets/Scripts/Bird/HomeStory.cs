@@ -24,6 +24,9 @@ public class HomeStory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        AudioManager.I().playAudio(1);
+
         myText.transform.gameObject.SetActive(true);
     }
 
@@ -70,6 +73,8 @@ public class HomeStory : MonoBehaviour
         rg.useGravity = true;
 
         Invoke("startBattleGame", 2f);
+
+        AudioManager.I().playEffect(3);
         //startBattleGame();
 
     }

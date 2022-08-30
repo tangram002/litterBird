@@ -20,10 +20,13 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource myPlayer;
 
+    public List<AudioClip>  audioClips = new List<AudioClip>();
    
     private void Awake()
     {
         audioMgr = this;
+
+        DontDestroyOnLoad(this);
     }
 
     void Start() {
@@ -31,7 +34,7 @@ public class AudioManager : MonoBehaviour
         Application.targetFrameRate = 60;
     }
 
-    public static AudioManager getBattleMgr() {
+    public static AudioManager I() {
 
         if (audioMgr == null) {
 
@@ -46,7 +49,14 @@ public class AudioManager : MonoBehaviour
 
     public void playAudio(int idx) { 
     
-        
+        myPlayer.clip = audioClips[idx];
+
+        myPlayer.Play();
+    }
+
+    public void playEffect(int idx) {
+
+        myPlayer.PlayOneShot(audioClips[idx]);
     }
         
 }

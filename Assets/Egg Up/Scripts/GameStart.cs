@@ -12,7 +12,7 @@ public class GameStart : MonoBehaviour
 
     void Start()
     {
-
+        AudioManager.I().playAudio(0);
     }
 
     void Update()
@@ -33,7 +33,8 @@ public class GameStart : MonoBehaviour
 
                 foreach (var birdd in birds) {
 
-                    birdd.slient();
+                    if(birdd!=null)
+                        birdd.slient();
                 }
 
                 // Debug.Log("碰到对象：" + hit.collider.name + " ta的位置：" + hit.point);

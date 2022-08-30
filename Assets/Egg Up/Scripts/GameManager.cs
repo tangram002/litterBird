@@ -70,6 +70,9 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	void Start(){
+
+		AudioManager.I().playAudio(2);
+
 		//update the diamond label without adding any diamonds
 		AddDiamonds(0, false);
 		
