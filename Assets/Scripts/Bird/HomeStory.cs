@@ -11,10 +11,20 @@ public class HomeStory : MonoBehaviour
 
     public StoryBird myBird;
 
+    public GameObject storyImage;
+
+    public void OnClick() {
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+
+        storyImage.SetActive(false);
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        myText.transform.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -67,7 +77,10 @@ public class HomeStory : MonoBehaviour
     public void startBattleGame()
     {
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+        myText.transform.gameObject.SetActive(false);
+        storyImage.SetActive(true);
+
+       
     }
 
 

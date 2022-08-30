@@ -1693,7 +1693,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: EGGCELLENT
+  m_Text: GobackHome
 --- !u!222 &909293624
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7029,7 +7029,7 @@ MonoBehaviour:
   tapToRestart: {fileID: 391908137}
   tapToContinue: {fileID: 450982819}
   totalHeight: 0
-  level: 50
+  level: 20
 --- !u!4 &1536160526
 Transform:
   m_ObjectHideFlags: 0
