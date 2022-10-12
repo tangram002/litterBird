@@ -21,9 +21,6 @@ public class GameStart : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            ////Debug.Log("dddddddddddddddddddddddd");
-
-            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hit;
@@ -36,9 +33,7 @@ public class GameStart : MonoBehaviour
                     if(birdd!=null)
                         birdd.slient();
                 }
-
-                // Debug.Log("碰到对象：" + hit.collider.name + " ta的位置：" + hit.point);
-                ///Debug.DrawLine(ray.origin, hit.point, Color.red);//将射线绘制出来 射线显示红色
+                                
                 Debug.Log(hit.collider.gameObject.name);
 
                 if (hit.collider.gameObject != null)

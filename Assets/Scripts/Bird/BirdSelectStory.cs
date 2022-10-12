@@ -62,23 +62,7 @@ public class BirdSelectStory : MonoBehaviour
     {
 
         if (!isAction)
-        {
-            /**
-            switch (storyNum)
-            {
-
-                case 0:
-                    myTouchAction = 10;           
-                    break;
-                case 1:
-                    myTouchAction = 14;           
-                    break;
-                case 2:
-                    myTouchAction = 17;                    
-                    break;
-            }
-           */
-
+        {           
             AudioManager.I().playEffect(4);
 
             animator.SetInteger("animation", myTouchAction);
@@ -99,6 +83,7 @@ public class BirdSelectStory : MonoBehaviour
 
         bs.showStory();
     }
+
     // Update is called once per frame
     void Update()
     {

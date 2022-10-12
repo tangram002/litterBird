@@ -4,6 +4,7 @@
 
 #reference https://github.com/github/gitignore/blob/master/Unity.gitignore
 
+Build/
 Temp/
 Library/
 Log/

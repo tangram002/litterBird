@@ -113,8 +113,7 @@ public class Platform : MonoBehaviour {
 			
 			if(Random.Range(0, bouncePadChance) == 0 && canHaveBouncePad){
 				hasBouncePad = true;
-				//bouncePad.SetActive(true);
-				
+								
 				circleImage.color = Color.red;
 			}
 		}

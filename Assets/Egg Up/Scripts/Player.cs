@@ -24,14 +24,14 @@ public class Player : MonoBehaviour {
 	}
 	
 	void LateUpdate(){
-		//scale the mesh transform to get the bouncy effect
+		//
 		float effect = rb.velocity.y * meshEffect;
 		effect = Mathf.Clamp(effect, -meshEffectLimit, meshEffectLimit);
 		mesh.transform.localScale = Vector3.MoveTowards(mesh.transform.localScale, Vector3.one + new Vector3(-effect, effect, -effect), Time.deltaTime * meshEffectSpeed);
 	}
 	
 	void OnTriggerEnter(Collider other){
-		//return if collider isn't a platform or if player is below collider (meaning the player should jump through the platform)
+		//
 		if(!other.gameObject.CompareTag("Platform") || transform.position.y < other.gameObject.transform.position.y)
 			return;
 		
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour {
 		
 		manager.Jumped(transform.position);
 		
-		//hide the intro title after the player jumps
+		//
 		if(transform.position.y > 1f)
 			manager.HideTitle();
 	}
